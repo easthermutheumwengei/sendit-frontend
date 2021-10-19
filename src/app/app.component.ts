@@ -9,6 +9,7 @@ import {UserService} from "./shared/user.service";
 })
 export class AppComponent {
   is_authenticated: any;
+  title: any;
 
 
   constructor(private router: Router, private userService: UserService){
