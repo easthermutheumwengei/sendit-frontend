@@ -185,7 +185,7 @@ export class HomeComponent implements OnInit {
       this.price = Math.round(Number(localStorage.getItem("distance")) * this.cost_per_km)
       localStorage.setItem("price", this.price.toString())
       localStorage.setItem("cost_per_km", this.cost_per_km.toString())
-    } else {
+    } else if (loadsize == "Large"){
       this.cost_per_km = 23
       this.price = Math.round(Number(localStorage.getItem("distance")) * this.cost_per_km)
       localStorage.setItem("price", this.price.toString())
@@ -306,7 +306,7 @@ export class HomeComponent implements OnInit {
       else if (this.new_order_details["load_size"]=='Medium'){
         this.price = 18 * Math.round(turf.distance(from, to, options))
       }
-      else {
+      else if (this.new_order_details["load_size"]=='Large'){
         this.price = 23 * Math.round(turf.distance(from, to, options))
       }
       var order_updates = {
