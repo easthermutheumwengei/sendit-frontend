@@ -56,6 +56,11 @@ export class HomeComponent implements OnInit {
       }
     })
 
+    var referrer =  document.referrer;
+    if (referrer.indexOf("login") !== -1){
+      window.location.reload()
+    }
+
   }
   loadOrderForm() {
     this.my_orders = false;
