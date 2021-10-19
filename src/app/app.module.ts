@@ -18,6 +18,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {LocationService} from "./shared/location.service";
 import {OrderService} from "./shared/order.service";
 import {GeocoderService} from "./shared/geocoder.service";
+import { LogoutComponent } from './logout/logout.component';
+import { NavigationComponent } from './navigation/navigation.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +29,8 @@ import {GeocoderService} from "./shared/geocoder.service";
     SignInComponent,
     SignUpComponent,
     HomeComponent,
+    LogoutComponent,
+    NavigationComponent,
   ],
   imports: [
     BrowserModule,
