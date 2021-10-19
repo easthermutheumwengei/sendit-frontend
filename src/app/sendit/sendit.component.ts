@@ -13,6 +13,7 @@ export class SenditComponent implements OnInit {
   }
 
   ngOnInit() {
-
+    var referrer =  document.referrer;
+    console.log(referrer)
   }
 }
