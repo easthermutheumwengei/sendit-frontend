@@ -14,7 +14,7 @@ export class SenditComponent implements OnInit {
 
   ngOnInit() {
     var referrer =  document.referrer;
-    if (referrer.indexOf("logout") !== -1){
+    if (referrer.indexOf("logout") > 0){
       window.location.reload()
     }
   }

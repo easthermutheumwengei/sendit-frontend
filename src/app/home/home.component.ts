@@ -47,6 +47,11 @@ export class HomeComponent implements OnInit {
   constructor(private router: Router, private geocoderService: GeocoderService, private locationService: LocationService, private orderService: OrderService) {
   }
   ngOnInit() {
+    var referrer =  document.referrer;
+    if (referrer.indexOf("login") > 0){
+      window.location.reload()
+    }
+
     this.orderService.getOrders().subscribe(data => {
       this.orders = data
       this.my_django_orders = JSON.parse(this.orders.orders)
@@ -55,11 +60,6 @@ export class HomeComponent implements OnInit {
         this.no_orders = false
       }
     })
-
-    var referrer =  document.referrer;
-    if (referrer.indexOf("login") !== -1){
-      window.location.reload()
-    }
 
   }
   loadOrderForm() {
