@@ -17,6 +17,6 @@ export const appRoutes: Routes = [
     path: 'login', component: UserComponent,
     children: [{ path: '', component: SignInComponent }]
   },
-  { path : '/', component: SenditComponent },
+  { path : '', component: SenditComponent },
   { path : 'logout', component: LogoutComponent },
 ];
